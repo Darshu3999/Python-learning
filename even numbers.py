@@ -4,3 +4,6 @@ for item in n:
         print ("The number",item,"is even")
     else:
         print ("The number",item ,"is odd")
+    
+n[0] = 100
+print(n)
