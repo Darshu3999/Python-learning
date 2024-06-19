@@ -1,4 +1,4 @@
-#to eliminate the duplicate numbers inthe guven list
+#to eliminate the duplicate numbers in the given list
 
 list=[1,3,6,6,7,10,10,1]
 new_list=[]
