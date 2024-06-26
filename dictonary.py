@@ -14,12 +14,12 @@ def display_emp_list():
 display_emp_list()
 
 
-def display_emp_list(marks):
+def display_emp_list1(marks):
    print(marks)
    for item in marks:
-       res = item
-       print(item)
-display_emp_list([1,2,3,4])
+       res = item*x
+
+display_emp_list1([1,2,3,4],10)
 
 x =10
 if x ==10:
