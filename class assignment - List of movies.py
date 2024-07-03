@@ -18,6 +18,13 @@ class Movielist:
             if Year == item['Year']:
                 print(index,item['Movie_Name'])
                 
+    def replace_movie(self,Year,updated_movie_name):
+        for item in self.movie:
+            if Year == item['Year']:
+                item.update({"Movie_Name":updated_movie_name})
+                print(item,"Movie Name Sucessfully Updated !!")
+                
+                
     def display_movie(self):
         print(self.movie)
             
@@ -32,3 +39,5 @@ c.add_movie({"Movie_Name":"VIRAT","Year":2016})
 c.remove_movie(2000)
 c.display_movie()
 c.particular_movie(1999)
+c.replace_movie(2010,"AIRAWATHA")
+c.display_movie()
