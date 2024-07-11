@@ -8,8 +8,10 @@ class vote():
     
     def allow_voting(self,voter):
         print(self.title)
-        self.duplicate_voters(voter['id'])
         result = self.check_eligibility(voter['age'])
+        duplicate_check = self.duplicate_voters(voter['id'])
+        if duplicate_check == True:
+            return
         if result == True:
             print ("You are ELIGIBLE TO VOTE")
             self.votecount = self.votecount+1
@@ -25,19 +27,19 @@ class vote():
         for item in self.voter_list:
             if id == item["id"]:
                 print("Duplicate Voter Found !!")
-            else:
                 return True
+        return None
             
     def check_eligibility(self,age):
         if age >= 18:
             return True
-        else:
+        else:  
             return False
             
 v = vote()
 v.allow_voting({"Name":"Darshan","age":20,"id":1})
 v.allow_voting({"Name":"Rajesh","age":25,"id":2})
-v.allow_voting({"Name":"Bheema","age":30,"id":3})
+v.allow_voting({"Name":"Bheema","age":30,"id":2})
 v.allow_voting({"Name":"Bheema","age":30,"id":3})
 v.allow_voting({"Name":"Sreenu","age":32,"id":4})
 v.allow_voting({"Name":"Lohith","age":16,"id":5})
